@@ -7,7 +7,7 @@ import NoItems from '../components/NoItems';
 import Loading from '../components/Loading';
 import Error from '../components/Error';
 
-const manageResMen = () => {
+const ManageResMen = () => {
     const { restaurantId } = useParams();
     const dispatch = useDispatch();
     const menu = useSelector(state => state.menu.data[restaurantId]);
@@ -121,4 +121,4 @@ const manageResMen = () => {
     );
 };
 
-export default manageResMen;
+export default ManageResMen;
