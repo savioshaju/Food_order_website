@@ -16,7 +16,7 @@ import Profile from './pages/Profile';
 import Adminroutes from './routes/Adminroutes';
 import Manageusers from './pages/Manageusers';
 import ManageRestaurants from './pages/ManageRestaurants';
-import ManageResMen from './pages/manageResMen';
+import ManageResMen from './pages/ManageResMen';
 import ManageMenu from './pages/ManageMenu';
 function App() {
   return (
