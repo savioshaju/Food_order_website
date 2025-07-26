@@ -1,7 +1,11 @@
-import axios from "axios";
+import axios from 'axios';
+
+const isDev = import.meta.env.DEV;
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: isDev
+    ? '/api' 
+    : 'https://fakerestaurantapi.runasp.net',
 });
 
 export const fetchRestaurant = async () => {
@@ -15,6 +19,6 @@ export const fetchRestaurantMenu = async (restaurantId) => {
 };
 
 export const fetchallItems = async () => {
-  const response = await api.get(`/api/Restaurant/items`);
+  const response = await api.get('/api/Restaurant/items');
   return response.data;
 };
