@@ -91,13 +91,20 @@ const NavSidebar = () => {
             <Link className={getLinkClass('/admin/ManageMenu')} to="/admin/ManageMenu">Manage Menu</Link>
           </>
         )}
-        {userType === 'Seller' && (
+        {['Seller', 'Admin'].includes(userType) && (
           <>
-            <div className="border-t border-gray-300 pt-4 text-sm text-gray-500">Seller Panel</div>
-            <Link className={getLinkClass('/Seller/CreateRestaurants')} to="/Seller/CreateRestaurants">Create Restaurants</Link>
-            <Link className={getLinkClass('/Seller/MyRestaurants')} to="/Seller/MyRestaurants">Manage Menu</Link>
+            {userType === 'Seller' && (
+              <div className="border-t border-gray-300 pt-4 text-sm text-gray-500">Seller Panel</div>
+            )}
+            <Link className={getLinkClass('/Seller/CreateRestaurants')} to="/Seller/CreateRestaurants">
+              Create Restaurants
+            </Link>
+            <Link className={getLinkClass('/Seller/MyRestaurants')} to="/Seller/MyRestaurants">
+              Manage My Menu
+            </Link>
           </>
         )}
+
 
       </div>
       {logoutSuccess && (

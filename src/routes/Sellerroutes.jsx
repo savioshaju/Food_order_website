@@ -3,7 +3,7 @@ import Adminerror from '../components/Adminerror';
 
 function isSeller() {
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        return currentUser?.userType === 'Seller';
+        return ['Seller', 'Admin'].includes(currentUser?.userType);
 }
 
 const Sellerroutes = ({ children }) => {
