@@ -43,7 +43,7 @@ const UserList = () => {
                 ))}
             </div>
 
-            {filteredUsers.length > 0 ? (
+            {filteredUsers?.length > 0 ? (
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {filteredUsers.map((user, index) => (
                         <div key={index} className="bg-white shadow-md rounded-lg p-4 relative">

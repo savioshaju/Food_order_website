@@ -67,7 +67,7 @@ const ManageMenu = () => {
             <Error />
         )
     }
-    if (sorted.length === 0) {
+    if (sorted?.length === 0) {
         return (
             <NoItems />
         )

@@ -77,7 +77,7 @@ const ManageResMen = () => {
                     ? 'Price: High → Low'
                     : 'Price: Low → High'}
             </button>
-            {sorted.length === 0 ? (
+            {sorted?.length === 0 ? (
                 <NoItems />
             ) : (
                 <div className="max-w-7xl mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

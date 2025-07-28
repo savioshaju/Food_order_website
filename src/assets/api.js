@@ -1,24 +1,27 @@
+
 import axios from 'axios';
 
-const isDev = import.meta.env.DEV;
-
 const api = axios.create({
-  baseURL: isDev
-    ? '/api' 
-    : 'https://fakerestaurantapi.runasp.net',
+  baseURL: 'https://res-34wr.onrender.com',
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
+
 export const fetchRestaurant = async () => {
-  const response = await api.get('/api/Restaurant');
+  const response = await api.get('/restaurants');
+  console.log(response);
   return response.data;
 };
 
 export const fetchRestaurantMenu = async (restaurantId) => {
-  const response = await api.get(`/api/Restaurant/${restaurantId}/menu`);
+  const response = await api.get(`/items/${restaurantId}/menu`);
   return response.data;
 };
 
 export const fetchallItems = async () => {
-  const response = await api.get('/api/Restaurant/items');
+  const response = await api.get('/items');
+  console.log(response);
   return response.data;
 };
