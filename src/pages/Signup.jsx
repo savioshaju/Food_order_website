@@ -26,7 +26,7 @@ const Signup = () => {
         if (!formData.username) newErrors.username = 'Username is required';
         if (!formData.phoneNumber) {
             newErrors.phoneNumber = 'Phone Number is required';
-        } else if (!/^[6-9]\d{9}$/.test(formData.phoneNumber)) {
+        } else if (/^\d{10}$/.test(formData.phoneNumber)) {
             newErrors.phoneNumber = 'Invalid  phone number';
         }
 
