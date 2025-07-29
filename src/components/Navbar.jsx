@@ -37,33 +37,35 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full bg-green-200 shadow-md px-4 py-3 flex items-center justify-between fixed top-0 z-40">
-        <div className="flex items-center gap-4">
-          <button
-            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="p-2 bg-none focus:outline-none text-green-700 font-bold text-lg"
-          >
-            ☰
-          </button>
+      {!['/checkout', '/login','/signup'].includes(location.pathname)
+        && (<nav className="w-full bg-green-200 shadow-md px-4 py-3 flex items-center justify-between fixed top-0 z-40">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="p-2 bg-none focus:outline-none text-green-700 font-bold text-lg"
+            >
+              ☰
+            </button>
 
-          <div className="hidden md:flex items-center gap-2">
-            <img src="/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
-            <span className="text-xl font-semibold text-green-700 hidden sm:block">
-              MyRestaurant
-            </span>
+            <div className="hidden md:flex items-center gap-2">
+              <img src="/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
+              <span className="text-xl font-semibold text-green-700 hidden sm:block">
+                MyRestaurant
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div className="w-2/3 max-w-md">
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={handleSearch}
-            placeholder="Search..."
-            className="w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-200"
-          />
-        </div>
-      </nav>
+          <div className="w-2/3 max-w-md">
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={handleSearch}
+              placeholder="Search..."
+              className="w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-200"
+            />
+          </div>
+        </nav>
+        )}
 
       {isSidebarOpen && <NavSidebar />}
     </>
