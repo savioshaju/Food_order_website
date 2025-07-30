@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Banner from './Banner'
 const Contactdetails = () => {
     return (
         <div class="bg-gray-800 shadow  py-12  border-gray-700">

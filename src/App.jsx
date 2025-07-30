@@ -23,6 +23,9 @@ import CreateRes from './pages/CreateRes';
 import Myres from './pages/Myres';
 import LocalResturant from './pages/LocalResturant';
 import MyMenu from './pages/MyMenu';
+import About from './pages/About';
+import 'flowbite';
+
 function App() {
   return (
     <Routes>
@@ -42,9 +45,10 @@ function App() {
         <Route path='admin/edit-menu/:restaurantId' element={<Adminroutes ><ManageResMen /></Adminroutes>} />
         <Route path='Seller/CreateRestaurants' element={<Sellerroutes><CreateRes /></Sellerroutes>} />
         <Route path='Seller/MyRestaurants' element={<Sellerroutes><Myres /></Sellerroutes>} />
-        <Route path='Seller/edit-menu/:restaurantId' element={<Sellerroutes><MyMenu/></Sellerroutes>} />
+        <Route path='Seller/edit-menu/:restaurantId' element={<Sellerroutes><MyMenu /></Sellerroutes>} />
         <Route path='NewRestaurant/:restaurantId' element={<LocalResturant />} />
         <Route path='Contact' element={<ContactPage />} />
+        <Route path='About' element={<About />} />
       </Route>
     </Routes>
   );

@@ -6,6 +6,7 @@ const allMenuSlice = createSlice({
         data: null,
         loading: false,
         error: null,
+        search: false,
     },
     reducers: {
         setAllMenuLoading: (state) => {
@@ -20,8 +21,11 @@ const allMenuSlice = createSlice({
             state.error = action.payload;
             state.loading = false;
         },
+        setSearch: (state, action) => {
+            state.search = action.payload;
+        },
     },
 });
 
-export const { setAllMenuError, setAllMenu, setAllMenuLoading } = allMenuSlice.actions;
+export const { setAllMenuError, setAllMenu, setAllMenuLoading, setSearch } = allMenuSlice.actions;
 export default allMenuSlice.reducer;
