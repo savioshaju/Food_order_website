@@ -44,7 +44,7 @@ const NavSidebar = () => {
       <div className="w-56 min-h-screen bg-green-200 shadow-md px-6 py-20 space-y-4 sticky bottom-0 hidden md:block">
       </div>
 
-      <div className="fixed w-56 min-h-screen bg-green-200 shadow-md px-6 py-20 space-y-4 top-0 left-0 bottom-0 z-30 overflow-y-auto hide-scrollbar">
+      <div className="fixed w-56 min-h-screen bg-green-200 shadow-md px-6 py-20 mt-4 space-y-4 top-0 left-0 bottom-0 z-30 overflow-y-auto hide-scrollbar">
         {user ? (
           <div className="flex flex-col items-center space-y-2">
             <div className="font-semibold text-green-600 uppercase text-center text-lg">
