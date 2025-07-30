@@ -66,7 +66,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className='w-full h-screen pt-20 bg-green-100'>
+    <div className='w-full min-h-screen pt-24 bg-green-100 pb-16'>
       <div className='w-full flex justify-center items-center'>
         <div className='text-green-500 text-3xl font-bold'>Contact Us</div>
       </div>
